@@ -29,15 +29,23 @@ const NexaInterface = () => {
       </header>
 
       {/* Main content grid */}
-      <div className="relative h-full flex items-center justify-center pt-16">
+      <div className="relative h-full flex items-center justify-center">
         
-        {/* Left side panels */}
-        <div className="absolute left-6 top-1/2 -translate-y-1/2 flex flex-col gap-4">
-          <DateTimePanel />
-          <SystemInfoPanel />
+        {/* Left column - stacked panels */}
+        <div className="absolute left-6 top-24 bottom-16 flex flex-col justify-between">
+          {/* Top left panels */}
+          <div className="flex flex-col gap-3">
+            <DateTimePanel />
+            <SystemInfoPanel />
+          </div>
           
-          {/* Connecting line */}
-          <div className="absolute -right-6 top-1/2 w-6 flex items-center">
+          {/* Bottom left - Communication */}
+          <div>
+            <CommunicationPanel />
+          </div>
+          
+          {/* Connecting line decoration */}
+          <div className="absolute -right-6 top-1/3 w-6 flex items-center">
             <div className="w-full h-0.5 bg-gradient-to-r from-primary/30 to-primary/10" />
             <div className="w-2 h-2 rounded-full bg-primary/30 -ml-1" />
           </div>
@@ -61,27 +69,25 @@ const NexaInterface = () => {
           </div>
         </div>
 
-        {/* Right side panels */}
-        <div className="absolute right-6 top-1/2 -translate-y-1/2 flex flex-col gap-4">
-          <QuickLinksPanel />
-          <WeatherPanel />
+        {/* Right column - stacked panels */}
+        <div className="absolute right-6 top-24 bottom-16 flex flex-col justify-between">
+          {/* Top right panels */}
+          <div className="flex flex-col gap-3">
+            <QuickLinksPanel />
+            <WeatherPanel />
+          </div>
           
-          {/* Connecting line */}
-          <div className="absolute -left-6 top-1/2 w-6 flex items-center">
+          {/* Bottom right - Mini displays */}
+          <div className="flex gap-3 justify-end">
+            <MiniArcDisplay label="Memory" value="87%" />
+            <MiniArcDisplay label="Tasks" value="12" />
+          </div>
+          
+          {/* Connecting line decoration */}
+          <div className="absolute -left-6 top-1/3 w-6 flex items-center">
             <div className="w-2 h-2 rounded-full bg-primary/30" />
             <div className="w-full h-0.5 bg-gradient-to-l from-primary/30 to-primary/10 -ml-1" />
           </div>
-        </div>
-
-        {/* Bottom left - Communication */}
-        <div className="absolute left-6 bottom-6">
-          <CommunicationPanel />
-        </div>
-
-        {/* Bottom right - Mini displays */}
-        <div className="absolute right-6 bottom-6 flex gap-4">
-          <MiniArcDisplay label="Memory" value="87%" />
-          <MiniArcDisplay label="Tasks" value="12" />
         </div>
 
         {/* Top corners - decorative elements */}
