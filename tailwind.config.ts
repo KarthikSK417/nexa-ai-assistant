@@ -13,6 +13,10 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        display: ['Orbitron', 'sans-serif'],
+        mono: ['Share Tech Mono', 'monospace'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -56,6 +60,12 @@ export default {
           "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
+        },
+        nexa: {
+          glow: "hsl(var(--nexa-glow))",
+          "glow-dim": "hsl(var(--nexa-glow-dim))",
+          dark: "hsl(var(--nexa-dark))",
+          grid: "hsl(var(--nexa-grid))",
         },
       },
       borderRadius: {
