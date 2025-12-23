@@ -18,54 +18,54 @@ const DateTimePanel = () => {
   const seconds = dateTime.getSeconds().toString().padStart(2, '0');
 
   return (
-    <div className="nexa-panel p-4 w-56 animate-flicker">
-      <div className="flex items-center gap-2 mb-3">
-        <div className="w-2 h-2 rounded-full bg-primary animate-pulse nexa-glow" />
-        <span className="text-xs text-primary/70 font-display tracking-widest uppercase">
+    <div className="nexa-panel p-3 w-48 animate-flicker">
+      <div className="flex items-center gap-2 mb-2">
+        <div className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse nexa-glow" />
+        <span className="text-[10px] text-primary/70 font-display tracking-widest uppercase">
           System Time
         </span>
       </div>
 
       {/* Date display */}
-      <div className="flex items-baseline gap-3 mb-4">
+      <div className="flex items-baseline gap-2 mb-2">
         <div className="relative">
-          <div className="text-5xl font-display text-primary nexa-glow-text">
+          <div className="text-3xl font-display text-primary nexa-glow-text">
             {date}
           </div>
-          <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-transparent" />
+          <div className="absolute -bottom-0.5 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-transparent" />
         </div>
         <div className="text-right">
-          <div className="text-sm text-primary/80 font-display lowercase">
+          <div className="text-xs text-primary/80 font-display lowercase">
             {month}
           </div>
-          <div className="text-xs text-primary/50 font-mono">
+          <div className="text-[10px] text-primary/50 font-mono">
             {year}
           </div>
         </div>
       </div>
 
       {/* Day */}
-      <div className="mb-4 pb-3 border-b border-primary/20">
-        <div className="text-lg text-primary/90 font-display tracking-wide lowercase nexa-glow-text">
+      <div className="mb-2 pb-2 border-b border-primary/20">
+        <div className="text-sm text-primary/90 font-display tracking-wide lowercase nexa-glow-text">
           {day}
         </div>
       </div>
 
       {/* Time display */}
       <div className="flex items-center justify-between">
-        <div className="flex items-baseline gap-1">
-          <span className="text-2xl font-display text-primary nexa-glow-text">{hours}</span>
-          <span className="text-primary animate-pulse">:</span>
-          <span className="text-2xl font-display text-primary nexa-glow-text">{minutes}</span>
-          <span className="text-primary animate-pulse">:</span>
-          <span className="text-lg font-display text-primary/70">{seconds}</span>
+        <div className="flex items-baseline gap-0.5">
+          <span className="text-xl font-display text-primary nexa-glow-text">{hours}</span>
+          <span className="text-primary animate-pulse text-sm">:</span>
+          <span className="text-xl font-display text-primary nexa-glow-text">{minutes}</span>
+          <span className="text-primary animate-pulse text-sm">:</span>
+          <span className="text-sm font-display text-primary/70">{seconds}</span>
         </div>
       </div>
 
       {/* Decorative corner */}
-      <div className="absolute bottom-0 right-0 w-8 h-8">
-        <div className="absolute bottom-2 right-2 w-4 h-0.5 bg-primary/40" />
-        <div className="absolute bottom-2 right-2 w-0.5 h-4 bg-primary/40" />
+      <div className="absolute bottom-0 right-0 w-6 h-6">
+        <div className="absolute bottom-1.5 right-1.5 w-3 h-0.5 bg-primary/40" />
+        <div className="absolute bottom-1.5 right-1.5 w-0.5 h-3 bg-primary/40" />
       </div>
     </div>
   );
