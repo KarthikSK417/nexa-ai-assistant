@@ -32,9 +32,9 @@ const NexaInterface = () => {
       <div className="relative h-full flex items-center justify-center">
         
         {/* Left column - stacked panels */}
-        <div className="absolute left-6 top-24 bottom-16 flex flex-col justify-between">
+        <div className="absolute left-4 top-16 bottom-4 flex flex-col justify-between">
           {/* Top left panels */}
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-2">
             <DateTimePanel />
             <SystemInfoPanel />
           </div>
@@ -70,15 +70,15 @@ const NexaInterface = () => {
         </div>
 
         {/* Right column - stacked panels */}
-        <div className="absolute right-6 top-24 bottom-16 flex flex-col justify-between">
+        <div className="absolute right-4 top-16 bottom-4 flex flex-col justify-between">
           {/* Top right panels */}
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-2">
             <QuickLinksPanel />
             <WeatherPanel />
           </div>
           
           {/* Bottom right - Mini displays */}
-          <div className="flex gap-3 justify-end">
+          <div className="flex gap-2 justify-end">
             <MiniArcDisplay label="Memory" value="87%" />
             <MiniArcDisplay label="Tasks" value="12" />
           </div>
